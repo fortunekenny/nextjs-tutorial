@@ -1,3 +1,5 @@
+"use client";
+
 import { createTask } from "@/utils/actions";
 
 const TaskForm = () => {
