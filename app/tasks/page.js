@@ -5,7 +5,7 @@ import TaskFormCustom from "@/components/TaskFormCustom";
 const TasksPage = () => {
   return (
     <div className="max-w-lg">
-      <TaskForm />
+      <TaskFormCustom />
       <TaskList />
     </div>
   );

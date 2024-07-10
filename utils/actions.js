@@ -27,7 +27,8 @@ export const createTask = async (formData) => {
 };
 
 export const createTaskCustom = async (prevState, formData) => {
-  //   await new Promise((resolve) => setTimeout(resolve, 2000));
+  // await new Promise((resolve) => setTimeout(resolve, 2000));
+
   const content = formData.get("content");
   const Task = z.object({
     content: z.string().min(5),
@@ -39,12 +40,11 @@ export const createTaskCustom = async (prevState, formData) => {
         content,
       },
     });
-    // revalidate path
     revalidatePath("/tasks");
-    return { message: "success!!!" };
+    return { message: "success" };
   } catch (error) {
-    // can't return error
-    return { message: "error..." };
+    console.log(error);
+    return { message: "error" };
   }
 };
 
